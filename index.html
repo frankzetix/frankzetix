@@ -1,143 +1,56 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-<meta charset="UTF-8">
-<title>Контакты</title>
-
-<style>
-    body {
-        margin: 0;
-        height: 100vh;
-        background: linear-gradient(180deg, #0a0f2c, #020617);
-        font-family: Arial, sans-serif;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        overflow: hidden;
-        color: white;
-    }
-
-    /* СНЕГ */
-    .snowflake {
-        position: fixed;
-        top: -10px;
-        color: white;
-        user-select: none;
-        animation: fall linear infinite;
-        opacity: 0.8;
-    }
-
-    @keyframes fall {
-        to {
-            transform: translateY(110vh);
+    <meta charset="UTF-8">
+    <title>Контакты</title>
+    <style>
+        body {
+            background: #0d1117;
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            color: white;
         }
-    }
+        .box {
+            background: #161b22;
+            padding: 30px;
+            border-radius: 12px;
+            width: 300px;
+            text-align: center;
+            box-shadow: 0 0 20px rgba(0,0,0,.6);
+        }
+        h2 {
+            margin-bottom: 20px;
+        }
+        a {
+            display: block;
+            text-decoration: none;
+            color: white;
+            padding: 12px;
+            margin: 10px 0;
+            border-radius: 8px;
+            font-weight: bold;
+            transition: 0.2s;
+        }
+        .vk { background: #0077ff; }
+        .forum { background: #ff9800; }
+        .discord { background: #5865F2; }
 
-    /* КАРТОЧКА */
-    .box {
-        background: rgba(22, 27, 34, 0.9);
-        padding: 30px;
-        border-radius: 15px;
-        width: 320px;
-        text-align: center;
-        box-shadow: 0 0 30px rgba(0, 255, 255, 0.2);
-        position: relative;
-        z-index: 2;
-    }
-
-    h2 {
-        margin-bottom: 10px;
-    }
-
-    .ny {
-        color: #00f7ff;
-        font-size: 14px;
-        margin-bottom: 20px;
-    }
-
-    a {
-        display: block;
-        text-decoration: none;
-        color: white;
-        padding: 12px;
-        margin: 12px 0;
-        border-radius: 10px;
-        font-weight: bold;
-        transition: 0.25s;
-    }
-
-    .vk { background: linear-gradient(135deg, #0077ff, #00c6ff); }
-    .forum { background: linear-gradient(135deg, #ff9800, #ff5722); }
-    .discord { background: linear-gradient(135deg, #5865F2, #7b83ff); }
-
-    a:hover {
-        transform: scale(1.07);
-        box-shadow: 0 0 15px rgba(255,255,255,.4);
-    }
-
-    /* ГИРЛЯНДА */
-    .lights {
-        position: absolute;
-        top: -10px;
-        left: 0;
-        width: 100%;
-        display: flex;
-        justify-content: space-around;
-    }
-
-    .bulb {
-        width: 10px;
-        height: 10px;
-        border-radius: 50%;
-        animation: glow 1.5s infinite alternate;
-    }
-
-    .red { background: red; }
-    .green { background: lime; }
-    .blue { background: cyan; }
-    .yellow { background: gold; }
-
-    @keyframes glow {
-        from { opacity: 0.4; }
-        to { opacity: 1; }
-    }
-</style>
+        a:hover {
+            transform: scale(1.05);
+            opacity: 0.9;
+        }
+    </style>
 </head>
-
 <body>
-
-<!-- СНЕЖИНКИ -->
-<script>
-    for (let i = 0; i < 40; i++) {
-        let snow = document.createElement("div");
-        snow.className = "snowflake";
-        snow.innerHTML = "❄";
-        snow.style.left = Math.random() * 100 + "vw";
-        snow.style.animationDuration = (3 + Math.random() * 5) + "s";
-        snow.style.fontSize = (10 + Math.random() * 20) + "px";
-        document.body.appendChild(snow);
-    }
-</script>
-
 <div class="box">
-    <!-- ГИРЛЯНДА -->
-    <div class="lights">
-        <div class="bulb red"></div>
-        <div class="bulb green"></div>
-        <div class="bulb blue"></div>
-        <div class="bulb yellow"></div>
-        <div class="bulb red"></div>
-        <div class="bulb green"></div>
-        <div class="bulb blue"></div>
-    </div>
-
     <h2>Связь со мной</h2>
-    <div class="ny">🎄 С Новым годом! ❄️</div>
 
     <a class="vk" href="https://vk.com/ТВОЙ_VK" target="_blank">VK</a>
     <a class="forum" href="https://forum.site/username" target="_blank">Forum</a>
     <a class="discord" href="https://discord.gg/XXXX" target="_blank">Discord</a>
 </div>
-
 </body>
 </html>
